@@ -3,6 +3,19 @@ document.documentElement.classList.add("has-js");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const navigation = document.querySelector("[data-navigation]");
 const navigationLinks = navigation ? [...navigation.querySelectorAll("a")] : [];
+const siteHeader = document.querySelector("[data-header]");
+const hero = document.querySelector(".hero");
+
+if (siteHeader && hero && "IntersectionObserver" in window) {
+  const headerObserver = new IntersectionObserver(
+    ([entry]) => siteHeader.classList.toggle("is-scrolled", !entry.isIntersecting),
+    { threshold: 0, rootMargin: `-${siteHeader.offsetHeight}px 0px 0px` },
+  );
+
+  headerObserver.observe(hero);
+} else if (siteHeader) {
+  siteHeader.classList.add("is-scrolled");
+}
 
 function closeMenu() {
   if (!menuToggle || !navigation) return;
