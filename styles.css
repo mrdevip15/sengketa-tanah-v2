@@ -2517,3 +2517,47 @@ h3 {
     animation: none;
   }
 }
+
+/* Hero title hierarchy */
+.hero h1 {
+  max-width: 14ch;
+  margin-bottom: var(--space-5);
+  font-size: clamp(3.2rem, 4.5vw, 4.25rem);
+  line-height: 0.98;
+}
+
+.hero-subtitle {
+  max-width: 34ch;
+  margin: 0 0 var(--space-8);
+  color: rgb(245 242 235 / 82%);
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
+}
+
+.hero-subtitle span {
+  display: inline;
+}
+
+.hero-subtitle span + span::before {
+  content: " ";
+}
+
+@media (max-width: 767px) {
+  .hero h1 {
+    max-width: 11ch;
+    font-size: clamp(2.55rem, 11vw, 3.3rem);
+  }
+
+  .hero-subtitle {
+    max-width: 28ch;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+}
