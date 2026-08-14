@@ -332,7 +332,7 @@ p {
   align-items: center;
   padding-block: calc(var(--header-height) + clamp(3rem, 8vw, 7rem)) clamp(8rem, 13vw, 11rem);
   overflow: clip;
-  background: var(--primary) url("hero-bg.png") center center / cover no-repeat;
+  background: var(--primary) url("hero-sengketa.png") center center / cover no-repeat;
   color: #f7f5f0;
 }
 
