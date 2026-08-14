@@ -1562,7 +1562,7 @@ p {
   --bg: #f5f2eb;
   --surface: #e9edf1;
   --surface-strong: #dfe4e9;
-  --primary: #13243e;
+  --primary: #0d2b52;
   --ink: #25303d;
   --muted: #59636f;
   --line: #c9ced3;
@@ -1571,9 +1571,9 @@ p {
   --accent-hover: #a78134;
   --accent-text: #755f25;
   --accent-soft: #e8ddb8;
-  --accent-ink: #13243e;
+  --accent-ink: #0d2b52;
   --header-bg: rgb(245 242 235 / 96%);
-  --focus: #13243e;
+  --focus: #0d2b52;
   --font-display: "Iowan Old Style", Baskerville, "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif;
   --container: 1240px;
@@ -1606,7 +1606,7 @@ h3 {
 }
 
 .site-header {
-  box-shadow: 0 12px 32px rgb(19 36 62 / 5%);
+  box-shadow: 0 12px 32px rgb(13 43 82 / 5%);
 }
 
 .has-js .site-header:not(.is-scrolled) {
@@ -1616,6 +1616,8 @@ h3 {
 .header-shell {
   grid-template-columns: minmax(13rem, auto) minmax(0, 1fr) auto;
   gap: clamp(var(--space-5), 2.5vw, var(--space-10));
+  width: 100%;
+  max-width: none;
 }
 
 .brand {
@@ -1642,6 +1644,7 @@ h3 {
   font-size: 0.85rem;
   font-weight: 750;
   letter-spacing: 0.065em;
+  white-space: nowrap;
 }
 
 .brand-copy span {
@@ -1691,11 +1694,11 @@ h3 {
 
 .button-primary {
   border-color: transparent;
-  box-shadow: 0 10px 24px rgb(19 36 62 / 16%);
+  box-shadow: 0 10px 24px rgb(13 43 82 / 16%);
 }
 
 .button-primary:hover {
-  box-shadow: 0 12px 28px rgb(19 36 62 / 20%);
+  box-shadow: 0 12px 28px rgb(13 43 82 / 20%);
 }
 
 .header-cta {
@@ -1780,7 +1783,7 @@ h3 {
 
 .button-secondary-hero {
   border-color: rgb(245 242 235 / 48%);
-  background: rgb(19 36 62 / 42%);
+  background: rgb(13 43 82 / 42%);
 }
 
 .hero-benefits {
@@ -1854,6 +1857,18 @@ h3 {
   max-width: 70ch;
   margin: 0;
   color: var(--muted);
+}
+
+.summary-copy > p:not(.section-lead),
+.process-list p,
+.faq-answer p,
+.cta-copy p {
+  text-align: justify;
+}
+
+.summary-copy strong,
+.process-list strong {
+  font-weight: 800;
 }
 
 .summary-copy .section-lead {
@@ -2153,6 +2168,12 @@ h3 {
 .cta-parcel .cta-parcel-fill {
   fill: rgb(185 150 73 / 18%);
   stroke: var(--accent);
+}
+
+.cta-parcel .cta-parcel-active {
+  fill: rgb(185 150 73 / 13%);
+  stroke: var(--accent);
+  stroke-width: 1.7;
 }
 
 .site-footer {
@@ -2559,5 +2580,219 @@ h3 {
 @media (max-width: 380px) {
   .hero h1 {
     font-size: 2.35rem;
+  }
+}
+
+/* Let every page heading use the full width of its layout column. */
+main h1,
+main h2,
+main h3 {
+  max-width: none;
+}
+
+/* Single-column centered reading flow. */
+.hero-grid,
+.summary-copy,
+.dispute-types .container,
+.case-groups,
+.process-grid,
+.reasons-grid,
+.faq-grid,
+.cta-grid,
+.resolution-paths {
+  grid-template-columns: 1fr;
+}
+
+main .container {
+  text-align: center;
+}
+
+.hero-copy,
+.summary-copy,
+.section-heading,
+.process-intro,
+.faq-intro,
+.cta-copy {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.summary-copy h2,
+.summary-copy > p,
+.summary-copy .section-lead,
+.summary-copy > p:last-child,
+.summary-subtitle {
+  grid-column: 1;
+  grid-row: auto;
+  max-width: 72ch;
+  margin-inline: auto;
+}
+
+.summary-copy h2,
+.summary-copy .section-lead,
+.summary-subtitle {
+  max-width: 100%;
+}
+
+.hero-actions,
+.cta-actions {
+  justify-content: center;
+}
+
+.hero-benefits {
+  grid-template-columns: 1fr;
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.hero-benefits p,
+.hero-benefits p + p {
+  padding: var(--space-4) 0;
+  border-left: 0;
+  border-bottom: 1px solid rgb(245 242 235 / 22%);
+}
+
+.case-groups {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+}
+
+.case-group-large {
+  grid-column: auto;
+}
+
+.case-group-large ul {
+  grid-template-columns: 1fr;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.case-group li {
+  display: block;
+  text-align: center;
+}
+
+.case-group li::before {
+  display: inline-block;
+  margin: 0 0.6rem 0.1rem 0;
+}
+
+.process-intro,
+.faq-intro {
+  position: static;
+}
+
+.process-intro svg,
+.faq-intro svg,
+.cta-parcel {
+  margin-inline: auto;
+}
+
+.process-list,
+.faq-list {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+}
+
+.process-list h3,
+.process-list p,
+.faq-list summary,
+.faq-answer,
+.reason h3,
+.cta-copy p {
+  max-width: none;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.reasons-grid {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+}
+
+.reason,
+.reason-wide,
+.reason-last,
+.reason:not(.reason-wide) {
+  grid-column: auto;
+  border-right: 0;
+  border-left: 0;
+}
+
+.reason::before {
+  margin-inline: auto;
+}
+
+.faq-answer {
+  padding-right: 0;
+}
+
+.cta-copy {
+  grid-column: auto;
+}
+
+.footer-grid {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+.footer-contact {
+  justify-items: center;
+  text-align: center;
+}
+
+/* Final hero polish: keep the viewport clean and the focal copy readable. */
+html,
+body {
+  overflow-x: clip;
+}
+
+.header-shell,
+.brand,
+.brand-copy,
+.primary-nav {
+  min-width: 0;
+}
+
+.hero-copy {
+  max-width: 64rem;
+}
+
+.hero h1,
+.hero-subtitle {
+  text-shadow: 0 2px 22px rgb(0 0 0 / 30%);
+}
+
+.hero h1 {
+  text-wrap: balance;
+}
+
+@media (min-width: 921px) {
+  .hero-copy {
+    max-width: 78rem;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(2.7rem, 4.5vw, 5rem);
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+
+  .hero-subtitle {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 920px) {
+  .hero h1,
+  .hero-subtitle {
+    white-space: normal;
+    text-wrap: balance;
   }
 }
