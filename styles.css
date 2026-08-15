@@ -2981,3 +2981,220 @@ body {
     text-align: center;
   }
 }
+
+/* Dispute types: content on the left, section heading on the right. */
+@media (min-width: 921px) {
+  .dispute-types .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.55fr);
+    align-items: start;
+    gap: clamp(var(--space-12), 6vw, 6rem);
+    text-align: left;
+  }
+
+  .dispute-types .case-groups {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .dispute-types .section-heading {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-8));
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .dispute-types .section-heading h2 {
+    max-width: 10ch;
+    margin: 0;
+    font-size: clamp(2.8rem, 4vw, 4.25rem);
+    line-height: 0.98;
+    text-align: left;
+  }
+
+  .dispute-types .case-group-large ul {
+    grid-template-columns: 1fr;
+    max-width: 38rem;
+    margin: 0;
+  }
+
+  .dispute-types .case-group li {
+    display: grid;
+    grid-template-columns: 0.6rem minmax(0, 1fr);
+    gap: var(--space-3);
+    text-align: left;
+  }
+
+  .dispute-types .case-group li::before {
+    display: block;
+    margin: 0.35rem 0 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .dispute-types .container {
+    grid-template-columns: 1fr;
+  }
+
+  .dispute-types .section-heading {
+    grid-row: 1;
+    width: min(100%, 46rem);
+    margin-inline: auto;
+  }
+
+  .dispute-types .case-groups {
+    grid-row: 2;
+    width: min(100%, 46rem);
+    margin: var(--space-10) auto 0;
+  }
+}
+
+/* Alternating desktop sections: right / left / right / left / right headings. */
+@media (min-width: 921px) {
+  .process-grid,
+  .faq-grid {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.58fr) minmax(0, 1.42fr);
+    align-items: start;
+    gap: clamp(var(--space-12), 7vw, 7rem);
+    text-align: left;
+  }
+
+  .process-intro,
+  .faq-intro {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-8));
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .process-list,
+  .faq-list {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .process-intro h2,
+  .faq-intro h2 {
+    max-width: 10ch;
+    margin: 0;
+    text-align: left;
+  }
+
+  .process-list h3,
+  .process-list p,
+  .faq-list summary,
+  .faq-answer,
+  .faq-answer p {
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .reasons .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.42fr) minmax(18rem, 0.58fr);
+    align-items: start;
+    gap: clamp(var(--space-12), 7vw, 7rem);
+    text-align: left;
+  }
+
+  .reasons-grid {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .reasons-heading {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-8));
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .reasons-heading h2 {
+    max-width: 10ch;
+    margin: 0;
+    text-align: left;
+  }
+
+  .reasons .reason h3 {
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .reasons .reason::before {
+    margin-inline: 0;
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.7fr) minmax(0, 1.3fr);
+    align-items: center;
+    gap: clamp(var(--space-12), 7vw, 7rem);
+    text-align: left;
+  }
+
+  .cta-parcel {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+  }
+
+  .cta-copy {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .cta-copy h2,
+  .cta-copy p {
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .cta-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 920px) {
+  .process-grid,
+  .reasons .container,
+  .faq-grid,
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-intro,
+  .reasons-heading,
+  .faq-intro,
+  .cta-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .process-list,
+  .reasons-grid,
+  .faq-list,
+  .cta-parcel {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
