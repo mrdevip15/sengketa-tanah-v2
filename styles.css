@@ -2796,3 +2796,188 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Editorial service summary: centered composition, readable prose. */
+.service-summary {
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
+  padding-block: clamp(6.5rem, 10vw, 9rem);
+}
+
+.service-summary .summary-copy {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: min(100%, 68rem);
+  row-gap: 0;
+  margin-inline: auto;
+}
+
+.service-summary .summary-copy h2 {
+  grid-column: 1;
+  grid-row: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  font-size: clamp(2.75rem, 4vw, 4rem);
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+  text-align: center;
+}
+
+.service-summary .summary-copy .section-lead {
+  grid-column: 1;
+  width: min(100%, 48rem);
+  max-width: 48rem;
+  margin: var(--space-6) auto 0;
+  color: var(--primary);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.42;
+  text-align: center;
+}
+
+.service-summary .summary-copy > p:not(.section-lead) {
+  grid-column: 1;
+  width: min(100%, 65ch);
+  max-width: 65ch;
+  margin: var(--space-10) auto 0;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.82;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.service-summary .summary-subtitle {
+  grid-column: 1;
+  width: min(100%, 65ch);
+  max-width: 65ch;
+  margin: var(--space-16) auto 0;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--line);
+  font-size: clamp(1.8rem, 2.5vw, 2.35rem);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.service-summary .summary-subtitle + p {
+  margin-top: var(--space-6);
+}
+
+.service-summary .summary-copy > p:last-child {
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .service-summary {
+    padding-block: clamp(5rem, 16vw, 6.5rem);
+  }
+
+  .service-summary .summary-copy h2 {
+    font-size: clamp(2.4rem, 10vw, 3.25rem);
+  }
+
+  .service-summary .summary-copy > p:not(.section-lead) {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .service-summary .summary-subtitle {
+    margin-top: var(--space-12);
+    padding-top: var(--space-6);
+  }
+}
+
+/* Reference-inspired introduction: visual evidence beside focused legal copy. */
+.service-summary .container {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(var(--space-12), 7vw, 7rem);
+  text-align: left;
+}
+
+.summary-visual {
+  position: relative;
+  align-self: stretch;
+  min-height: 38rem;
+  margin: 0;
+  overflow: hidden;
+  background: var(--primary);
+}
+
+.summary-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgb(255 255 255 / 18%);
+  pointer-events: none;
+}
+
+.summary-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% center;
+}
+
+.service-summary .summary-copy {
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.service-summary .summary-copy h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-size: clamp(2.65rem, 4vw, 4rem);
+  text-align: left;
+}
+
+.service-summary .summary-copy .section-lead {
+  width: 100%;
+  max-width: 36rem;
+  margin: var(--space-6) 0 0;
+  text-align: left;
+}
+
+.service-summary .summary-copy > p:not(.section-lead),
+.service-summary .summary-subtitle {
+  width: 100%;
+  max-width: 62ch;
+  margin-inline: 0;
+}
+
+@media (max-width: 920px) {
+  .service-summary .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .summary-visual {
+    width: min(100%, 46rem);
+    min-height: auto;
+    aspect-ratio: 4 / 3;
+    margin-inline: auto;
+  }
+
+  .service-summary .summary-copy {
+    width: min(100%, 46rem);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-summary .container {
+    gap: var(--space-10);
+  }
+
+  .summary-visual {
+    aspect-ratio: 5 / 4;
+  }
+
+  .service-summary .summary-copy h2,
+  .service-summary .summary-copy .section-lead {
+    max-width: none;
+    text-align: center;
+  }
+}
