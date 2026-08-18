@@ -4023,3 +4023,41 @@ body {
     font-size: 0.82rem;
   }
 }
+
+/* Desktop hero follows the balanced two-line hierarchy used on mobile. */
+@media (min-width: 768px) {
+  .hero-copy {
+    width: min(100%, 60rem);
+    max-width: 60rem;
+  }
+
+  .hero h1 {
+    max-width: 60rem;
+    margin-inline: auto;
+    font-size: clamp(3.25rem, 5vw, 4.75rem);
+    line-height: 0.92;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  .hero h1 span {
+    display: block;
+  }
+
+  .hero h1 span + span::before {
+    content: none;
+  }
+
+  .hero h1 span:last-child {
+    width: fit-content;
+    margin: 0.12em auto 0;
+    white-space: nowrap;
+  }
+
+  .hero-subtitle {
+    max-width: 44rem;
+    margin-inline: auto;
+    white-space: normal;
+    text-wrap: balance;
+  }
+}
