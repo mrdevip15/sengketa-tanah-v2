@@ -3987,6 +3987,12 @@ body {
   text-align-last: left;
 }
 
+.final-cta .cta-copy > p {
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+}
+
 @media (max-width: 767px) {
   .brand-copy strong {
     font-size: clamp(0.86rem, 3.6vw, 1rem);
