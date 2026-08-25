@@ -80,13 +80,20 @@ if (reducedMotion || !("IntersectionObserver" in window)) {
   revealElements.forEach((element) => revealObserver.observe(element));
 }
 
-// Google Tag Conversion Event Tracking (contact_us)
+// Google Tag & Google Ads Conversion Event Tracking
 const contactLinks = document.querySelectorAll('a[href*="wa.me"], a[href^="mailto:"], a[href^="tel:"]');
 contactLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (typeof gtag === "function") {
       const isMail = link.href.startsWith("mailto:");
       const isTel = link.href.startsWith("tel:");
+      
+      // Google Ads Direct Conversion Tracking
+      gtag("event", "conversion", {
+        send_to: "AW-10938076157/4lK6CIzRt-ccEP2X198o",
+      });
+
+      // Google Analytics (GA4) Event Tracking
       gtag("event", "contact_us", {
         method: isMail ? "email" : isTel ? "phone" : "whatsapp",
         event_category: "engagement",
