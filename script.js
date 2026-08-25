@@ -79,3 +79,20 @@ if (reducedMotion || !("IntersectionObserver" in window)) {
 
   revealElements.forEach((element) => revealObserver.observe(element));
 }
+
+// Google Tag Conversion Event Tracking (contact_us)
+const contactLinks = document.querySelectorAll('a[href*="wa.me"], a[href^="mailto:"], a[href^="tel:"]');
+contactLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      const isMail = link.href.startsWith("mailto:");
+      const isTel = link.href.startsWith("tel:");
+      gtag("event", "contact_us", {
+        method: isMail ? "email" : isTel ? "phone" : "whatsapp",
+        event_category: "engagement",
+        event_label: link.getAttribute("aria-label") || link.textContent.trim() || link.href,
+      });
+    }
+  });
+});
+
