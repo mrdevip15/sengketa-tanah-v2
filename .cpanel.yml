@@ -10,6 +10,3 @@ deployment:
     - /bin/cp -f hero-sengketa.webp "$DEPLOYPATH"
     - /bin/cp -f hero-bg.webp "$DEPLOYPATH"
     - /bin/cp -f timbangan-law.webp "$DEPLOYPATH"
-    - /bin/cp -f hero-sengketa.png "$DEPLOYPATH"
-    - /bin/cp -f hero-bg.png "$DEPLOYPATH"
-    - /bin/cp -f timbangan-law.png "$DEPLOYPATH"
