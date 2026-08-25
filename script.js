@@ -96,3 +96,41 @@ contactLinks.forEach((link) => {
   });
 });
 
+// Modal Interaction for Privacy Policy & Disclaimer
+const modalOpenBtns = document.querySelectorAll("[data-modal-open]");
+const modalCloseBtns = document.querySelectorAll("[data-modal-close]");
+
+modalOpenBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modalId = btn.getAttribute("data-modal-open");
+    const modal = document.getElementById(modalId);
+    if (modal && typeof modal.showModal === "function") {
+      modal.showModal();
+    }
+  });
+});
+
+modalCloseBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modal = btn.closest("dialog");
+    if (modal && typeof modal.close === "function") {
+      modal.close();
+    }
+  });
+});
+
+document.querySelectorAll("dialog.site-modal").forEach((dialog) => {
+  dialog.addEventListener("click", (event) => {
+    const rect = dialog.getBoundingClientRect();
+    const isInDialog =
+      rect.top <= event.clientY &&
+      event.clientY <= rect.top + rect.height &&
+      rect.left <= event.clientX &&
+      event.clientX <= rect.left + rect.width;
+    if (!isInDialog) {
+      dialog.close();
+    }
+  });
+});
+
+

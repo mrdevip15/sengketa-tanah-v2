@@ -46,7 +46,7 @@
       content="Lindungi hak atas tanah Anda dengan pendampingan hukum dan strategi penyelesaian yang tepat."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="hero-sengketa.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="hero-sengketa.webp" as="image" type="image/webp" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
     <title>Pengacara Sengketa Tanah | Navins Counsellors At Law</title>
     <script type="application/ld+json">
@@ -58,6 +58,13 @@
         "email": "info@pengacarasengketatanah.com",
         "telephone": "+6285342917229",
         "areaServed": "Indonesia",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Sunset Boulevard Blok 5B/16 CitraLand City, Centre Point of Indonesia (CPI), Kel. Maccini Sombala Kec. Tamalate",
+          "addressLocality": "Makassar",
+          "postalCode": "90224",
+          "addressCountry": "ID"
+        },
         "knowsAbout": [
           "Sengketa tanah",
           "Hukum pertanahan",
@@ -105,7 +112,7 @@
     <header class="site-header" data-header>
       <div class="header-shell">
         <a class="brand" href="#beranda" aria-label="Pengacara Sengketa Tanah, kembali ke beranda">
-          <img class="brand-logo" src="timbangan-law.png" alt="" />
+          <img class="brand-logo" src="timbangan-law.webp" alt="Logo Navins Counsellors At Law" width="40" height="40" />
           <span class="brand-copy">
             <strong>Pengacara Sengketa Tanah</strong>
             <span>Pendampingan Hukum Profesional untuk Kasus Pertanahan &amp; Properti</span>
@@ -177,7 +184,7 @@
         <div class="container">
           <figure class="summary-visual reveal">
             <img
-              src="hero-bg.png"
+              src="hero-bg.webp"
               width="1536"
               height="1024"
               loading="lazy"
@@ -402,15 +409,97 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div>
+        <div class="footer-col footer-col-brand">
           <p class="footer-brand">PENGACARA SENGKETA TANAH</p>
+          <p class="footer-firm">Navins Counsellors At Law</p>
+          <p class="footer-copy">&copy; 2025 Navins Counsellors At Law. Seluruh hak cipta dilindungi.</p>
+          <div class="footer-legal-links">
+            <button type="button" class="legal-link-btn" data-modal-open="privacy-modal">Kebijakan Privasi</button>
+            <span aria-hidden="true">&bull;</span>
+            <button type="button" class="legal-link-btn" data-modal-open="disclaimer-modal">Disclaimer Hukum</button>
+          </div>
         </div>
-        <div class="footer-contact">
-          <a href="mailto:info@pengacarasengketatanah.com">info@pengacarasengketatanah.com</a>
-          <a href="tel:+6285342917229">0853-4291-7229</a>
+
+        <div class="footer-col footer-col-address">
+          <p class="footer-heading">Makassar Office</p>
+          <address class="footer-address">
+            Jl. Sunset Boulevard Blok 5B/16 CitraLand City, Centre Point of Indonesia (CPI)<br />
+            Kel. Maccini Sombala, Kec. Tamalate, Makassar, 90224, Indonesia
+          </address>
+          <a
+            class="footer-map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Jl.+Sunset+Boulevard+Blok+5B%2F16+CitraLand+City+Centre+Point+of+Indonesia+Makassar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lihat di Google Maps <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+
+        <div class="footer-col footer-col-contact">
+          <p class="footer-heading">Kontak &amp; Konsultasi</p>
+          <div class="footer-contact-links">
+            <a href="mailto:info@pengacarasengketatanah.com">info@pengacarasengketatanah.com</a>
+            <a href="tel:+6285342917229">0853-4291-7229</a>
+            <a
+              class="button button-primary footer-cta-btn"
+              href="https://wa.me/6285342917229?text=Halo%20Navins%20Counsellors%20At%20Law%2C%20saya%20ingin%20berkonsultasi%20mengenai%20sengketa%20tanah."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Konsultasi WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <dialog id="privacy-modal" class="site-modal" aria-labelledby="privacy-modal-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 id="privacy-modal-title">Kebijakan Privasi (Privacy Policy)</h2>
+          <button type="button" class="modal-close" data-modal-close aria-label="Tutup popup">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Terakhir diperbarui:</strong> 25 Agustus 2025</p>
+          <p>Navins Counsellors At Law menghormati dan berkomitmen untuk melindungi privasi serta kerahasiaan informasi pribadi dan dokumen hukum setiap klien maupun calon klien yang mengunjungi website ini.</p>
+          <h3>1. Informasi yang Kami Kumpulkan</h3>
+          <p>Kami hanya mengumpulkan informasi yang Anda berikan secara sukarela saat menghubungi kami melalui WhatsApp, Email, atau Telepon (seperti Nama, Nomor Kontak, Kronologi Kasus, dan Dokumen Terkait Kasus Pertanahan).</p>
+          <h3>2. Kerahasiaan Advokat & Klien</h3>
+          <p>Segala data, fakta, dokumen, serta kronologi sengketa tanah yang Anda sampaikan kepada kami dilindungi oleh prinsip kerahasiaan profesi advokat sesuai Undang-Undang Advokat yang berlaku di Republik Indonesia.</p>
+          <h3>3. Penggunaan Data</h3>
+          <p>Data yang Anda berikan hanya digunakan semata-mata untuk keperluan evaluasi awal perkara, komunikasi konsultasi hukum, dan penyusunan strategi penyelesaian sengketa Anda. Kami tidak akan pernah menjual atau membagikan informasi Anda kepada pihak ketiga manapun untuk tujuan komersial.</p>
+          <h3>4. Analitik & Cookies</h3>
+          <p>Website ini menggunakan layanan Google Analytics untuk memahami interaksi pengunjung secara anonim guna meningkatkan kualitas layanan dan performa situs.</p>
+          <h3>5. Hubungi Kami</h3>
+          <p>Jika ada pertanyaan terkait kebijakan privasi ini, silakan hubungi kami di <strong>info@pengacarasengketatanah.com</strong>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button button-primary" data-modal-close>Tutup</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Disclaimer Modal -->
+    <dialog id="disclaimer-modal" class="site-modal" aria-labelledby="disclaimer-modal-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 id="disclaimer-modal-title">Disclaimer Hukum</h2>
+          <button type="button" class="modal-close" data-modal-close aria-label="Tutup popup">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3>Informasi Umum Bukan Nasihat Hukum Mengikat</h3>
+          <p>Seluruh materi, artikel, FAQ, dan informasi yang tercantum pada website ini dimaksudkan semata-mata untuk tujuan informasi umum dan edukasi mengenai hukum sengketa tanah di Indonesia.</p>
+          <p>Informasi dalam website ini tidak membentuk hubungan hukum advokat-klien (<em>attorney-client relationship</em>) formal sampai adanya penandatanganan Surat Kuasa Khusus / Perjanjian Jasa Hukum secara resmi.</p>
+          <h3>Karakteristik Kasus</h3>
+          <p>Setiap perkara sengketa pertanahan memiliki fakta hukum, bukti dokumen, dan yurisprudensi yang unik. Hasil penanganan perkara sebelumnya tidak menjamin hasil yang sama pada perkara lainnya karena putusan akhir tetap berada pada kewenangan majelis hakim atau otoritas yang berwenang.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button button-primary" data-modal-close>Saya Mengerti</button>
+        </div>
+      </div>
+    </dialog>
 
     <a
       class="whatsapp-float"
