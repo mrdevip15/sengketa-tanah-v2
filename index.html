@@ -2,7 +2,7 @@
 <html lang="id">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10938076157"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWC6TRK76C"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -10,27 +10,6 @@
 
       gtag('config', 'G-FWC6TRK76C');
       gtag('config', 'AW-10938076157');
-    </script>
-    <!-- Google tag (gtag.js) event - delayed navigation helper -->
-    <script>
-      // Helper function to delay opening a URL until a gtag event is sent.
-      // Call it in response to an action that should navigate to a URL.
-      function gtagSendEvent(url) {
-        var callback = function () {
-          if (typeof url === 'string') {
-            window.location = url;
-          }
-        };
-        if (typeof gtag === 'function') {
-          gtag('event', 'contact_us', {
-            'event_callback': callback,
-            'event_timeout': 2000,
-          });
-        } else {
-          callback();
-        }
-        return false;
-      }
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

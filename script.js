@@ -82,15 +82,38 @@ if (reducedMotion || !("IntersectionObserver" in window)) {
 
 // Google Tag & Google Ads Conversion Event Tracking
 const contactLinks = document.querySelectorAll('a[href*="wa.me"], a[href^="mailto:"], a[href^="tel:"]');
+
+function createContactTransactionId() {
+  const storageKey = "google_ads_contact_transaction_id";
+
+  try {
+    const storedTransactionId = window.sessionStorage.getItem(storageKey);
+    if (storedTransactionId) return storedTransactionId;
+
+    const transactionId =
+      typeof window.crypto?.randomUUID === "function"
+        ? window.crypto.randomUUID()
+        : `contact-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
+    window.sessionStorage.setItem(storageKey, transactionId);
+    return transactionId;
+  } catch {
+    return `contact-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  }
+}
+
+const contactTransactionId = createContactTransactionId();
+
 contactLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (typeof gtag === "function") {
       const isMail = link.href.startsWith("mailto:");
       const isTel = link.href.startsWith("tel:");
-      
+
       // Google Ads Direct Conversion Tracking
       gtag("event", "conversion", {
         send_to: "AW-10938076157/4lK6CIzRt-ccEP2X198o",
+        transaction_id: contactTransactionId,
       });
 
       // Google Analytics (GA4) Event Tracking
@@ -139,5 +162,4 @@ document.querySelectorAll("dialog.site-modal").forEach((dialog) => {
     }
   });
 });
-
 
