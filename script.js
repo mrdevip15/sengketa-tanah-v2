@@ -80,11 +80,11 @@ if (reducedMotion || !("IntersectionObserver" in window)) {
   revealElements.forEach((element) => revealObserver.observe(element));
 }
 
-// Google Tag & Google Ads Conversion Event Tracking
-const contactLinks = document.querySelectorAll('a[href*="wa.me"], a[href^="mailto:"], a[href^="tel:"]');
+// Google Tag & Google Ads Conversion Event Tracking (WhatsApp only)
+const whatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]');
 
 function createContactTransactionId() {
-  const storageKey = "google_ads_contact_transaction_id";
+  const storageKey = "google_ads_wa_transaction_id";
 
   try {
     const storedTransactionId = window.sessionStorage.getItem(storageKey);
@@ -93,32 +93,29 @@ function createContactTransactionId() {
     const transactionId =
       typeof window.crypto?.randomUUID === "function"
         ? window.crypto.randomUUID()
-        : `contact-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        : `wa-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 
     window.sessionStorage.setItem(storageKey, transactionId);
     return transactionId;
   } catch {
-    return `contact-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    return `wa-${Date.now()}-${Math.random().toString(36).slice(2)}`;
   }
 }
 
-const contactTransactionId = createContactTransactionId();
+const whatsappTransactionId = createContactTransactionId();
 
-contactLinks.forEach((link) => {
+whatsappLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (typeof gtag === "function") {
-      const isMail = link.href.startsWith("mailto:");
-      const isTel = link.href.startsWith("tel:");
-
-      // Google Ads Direct Conversion Tracking
+      // Google Ads Direct Conversion Tracking for WhatsApp
       gtag("event", "conversion", {
         send_to: "AW-10938076157/4lK6CIzRt-ccEP2X198o",
-        transaction_id: contactTransactionId,
+        transaction_id: whatsappTransactionId,
       });
 
       // Google Analytics (GA4) Event Tracking
       gtag("event", "contact_us", {
-        method: isMail ? "email" : isTel ? "phone" : "whatsapp",
+        method: "whatsapp",
         event_category: "engagement",
         event_label: link.getAttribute("aria-label") || link.textContent.trim() || link.href,
       });
