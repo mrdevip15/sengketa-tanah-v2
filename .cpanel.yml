@@ -10,3 +10,5 @@ deployment:
     - /bin/cp -f hero-sengketa.webp "$DEPLOYPATH"
     - /bin/cp -f hero-bg.webp "$DEPLOYPATH"
     - /bin/cp -f timbangan-law.webp "$DEPLOYPATH"
+    - /bin/cp -f sertipikat-tanah-ganda.html "$DEPLOYPATH"
+    - /bin/cp -f sertipikat-tanah-ganda.webp "$DEPLOYPATH"

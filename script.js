@@ -160,3 +160,32 @@ document.querySelectorAll("dialog.site-modal").forEach((dialog) => {
   });
 });
 
+// Copy link functionality for article sharing
+const copyLinkBtn = document.getElementById("copyLinkBtn");
+const copyToast = document.getElementById("copyToast");
+
+if (copyLinkBtn && copyToast) {
+  copyLinkBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      copyToast.classList.add("show");
+      setTimeout(() => {
+        copyToast.classList.remove("show");
+      }, 2500);
+    } catch {
+      // Fallback
+      const tempInput = document.createElement("input");
+      tempInput.value = window.location.href;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      copyToast.classList.add("show");
+      setTimeout(() => {
+        copyToast.classList.remove("show");
+      }, 2500);
+    }
+  });
+}
+
+
