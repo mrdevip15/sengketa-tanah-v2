@@ -6,6 +6,35 @@ const navigationLinks = navigation ? [...navigation.querySelectorAll("a")] : [];
 const siteHeader = document.querySelector("[data-header]");
 const hero = document.querySelector(".hero");
 
+const heroSlideshow = document.querySelector("[data-hero-slideshow]");
+
+if (heroSlideshow) {
+  const slides = [...heroSlideshow.querySelectorAll("[data-hero-slide]")];
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeSlide = 0;
+  let timer;
+
+  const showSlide = (index) => {
+    activeSlide = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === activeSlide);
+      slide.setAttribute("aria-hidden", slideIndex === activeSlide ? "false" : "true");
+    });
+
+  };
+
+  const restartTimer = () => {
+    window.clearInterval(timer);
+    if (!prefersReducedMotion && slides.length > 1) {
+      timer = window.setInterval(() => showSlide(activeSlide + 1), 6500);
+    }
+  };
+
+  showSlide(0);
+  restartTimer();
+}
+
 if (siteHeader && hero && "IntersectionObserver" in window) {
   const headerObserver = new IntersectionObserver(
     ([entry]) => siteHeader.classList.toggle("is-scrolled", !entry.isIntersecting),
@@ -187,5 +216,3 @@ if (copyLinkBtn && copyToast) {
     }
   });
 }
-
-
