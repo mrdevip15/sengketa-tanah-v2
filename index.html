@@ -37,12 +37,13 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link
       rel="preload"
-      href="hero-sengketa.webp"
+      href="assets/images/architecture.webp"
       as="image"
       type="image/webp"
       fetchpriority="high"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="landing-variations.css?v=layouts-2" />
     <title>Pengacara Sengketa Tanah | Navins Counsellors At Law</title>
     <script type="application/ld+json">
       {
@@ -101,7 +102,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="variant-counsel">
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
 
     <header class="site-header" data-header>
@@ -109,6 +110,7 @@
         <a
           class="brand"
           href="#beranda"
+          data-brand-link
           aria-label="Pengacara Sengketa Tanah, kembali ke beranda"
         >
           <img
@@ -145,11 +147,11 @@
           aria-label="Navigasi utama"
           data-navigation
         >
-          <a href="#layanan">Ringkasan Layanan</a>
-          <a href="#jenis-sengketa">Jenis Sengketa</a>
-          <a href="#tahapan">Tahapan</a>
-          <a href="#faq">FAQ</a>
-          <a href="#artikel">Artikel</a>
+          <a href="#layanan" data-nav-key="layanan">Ringkasan Layanan</a>
+          <a href="#jenis-sengketa" data-nav-key="jenis-sengketa">Jenis Sengketa</a>
+          <a href="#tahapan" data-nav-key="tahapan">Tahapan</a>
+          <a href="#faq" data-nav-key="faq">FAQ</a>
+          <a href="#artikel" data-nav-key="artikel">Artikel</a>
         </nav>
 
         <a
@@ -165,68 +167,224 @@
     </header>
 
     <main id="main-content">
-      <section class="hero" id="beranda" aria-labelledby="hero-title">
-        <div
-          class="hero-slideshow"
-          data-hero-slideshow
-          aria-label="Galeri layanan hukum"
-        >
-          <div class="hero-slides" aria-live="polite">
-            <img
-              class="hero-slide is-active"
-              src="hero-sengketa.webp"
-              alt="Sertipikat dan area tanah yang menjadi objek sengketa"
-              width="1535"
-              height="1024"
-              fetchpriority="high"
-              data-hero-slide
-            />
-            <img
-              class="hero-slide"
-              src="hero-bg.webp"
-              alt="Area tanah yang menjadi objek sengketa dilihat dari udara"
-              width="1536"
-              height="1024"
-              loading="lazy"
-              data-hero-slide
-            />
-            <img
-              class="hero-slide"
-              src="greek-law-hero.jpg"
-              alt="Interior gedung hukum dengan pilar klasik"
-              width="5472"
-              height="3648"
-              loading="lazy"
-              data-hero-slide
-            />
-            <img
-              class="hero-slide"
-              src="law-library-2-hero.jpg"
-              alt="Rak buku hukum dengan koleksi referensi"
-              width="6240"
-              height="4160"
-              loading="lazy"
-              data-hero-slide
-            />
-            <img
-              class="hero-slide"
-              src="law-library-hero.jpg"
-              alt="Koleksi buku hukum di perpustakaan"
-              width="4744"
-              height="3163"
-              loading="lazy"
-              data-hero-slide
-            />
+      <div class="variant-picker" data-variant-picker role="group" aria-label="Pilih variasi landing page">
+        <span class="variant-picker-label">Pilihan arah</span>
+        <button type="button" class="variant-chip is-active" data-variant="counsel" aria-pressed="true">
+          <span class="variant-chip-index">01</span>
+          <span>Counsel</span>
+        </button>
+        <button type="button" class="variant-chip" data-variant="registry" aria-pressed="false">
+          <span class="variant-chip-index">02</span>
+          <span>Registry</span>
+        </button>
+        <button type="button" class="variant-chip" data-variant="brief" aria-pressed="false">
+          <span class="variant-chip-index">03</span>
+          <span>Brief</span>
+        </button>
+      </div>
+
+      <div class="variant-layout variant-layout-registry" aria-labelledby="registry-title">
+        <section class="registry-hero" id="registry-beranda">
+          <div class="registry-hero-media" aria-hidden="true">
+            <img src="assets/images/documents.webp" alt="" width="1600" height="1067" />
           </div>
-        </div>
+          <div class="registry-hero-inner container">
+            <div class="registry-hero-copy">
+
+              <h1 id="registry-title">Setiap hak atas tanah
+berawal dari
+<strong>fakta yang jelas.</strong></h1>
+              <p class="registry-lead">Kami mengurai dokumen, kronologi, dan risiko agar Anda bisa mengambil langkah hukum dengan dasar yang jelas.</p>
+              <div class="registry-actions">
+                <a class="button button-primary" href="https://wa.me/6285342917229?text=Halo%20Navins%20Counsellors%20At%20Law%2C%20saya%20ingin%20berkonsultasi%20mengenai%20sengketa%20tanah." target="_blank" rel="noopener noreferrer">Mulai Konsultasi</a>
+                <a class="registry-text-link" href="#registry-path">Lihat alur penanganan <svg class="direction-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a>
+              </div>
+            </div>
+            <aside class="registry-intake" aria-label="Ringkasan layanan">
+              <div class="registry-intake-top"><span>Untuk konsultasi awal</span><span>Navins</span></div>
+              <h2>Mulai dari dokumen Anda.</h2>
+              <ul>
+                <li><span>01</span><strong>Dokumen kepemilikan</strong><small>Sertipikat, akta, riwayat transaksi</small></li>
+                <li><span>02</span><strong>Kronologi sengketa</strong><small>Penguasaan, batas, dan komunikasi</small></li>
+                <li><span>03</span><strong>Rute penyelesaian</strong><small>Negosiasi, mediasi, atau litigasi</small></li>
+              </ul>
+              <a href="mailto:info@pengacarasengketatanah.com">info@pengacarasengketatanah.com <svg class="direction-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a>
+            </aside>
+          </div>
+        </section>
+
+        <section class="registry-proof" id="registry-layanan">
+          <div class="container registry-proof-grid">
+
+            <div><h2>Hak yang kuat dimulai dari pemahaman yang runtut.</h2><p>Setiap perkara memiliki karakter dan risiko yang berbeda. Tim Pengacara Sengketa Tanah mendampingi analisis awal, penyusunan strategi, hingga langkah hukum yang sesuai.</p></div>
+          </div>
+        </section>
+
+        <section class="registry-cases" id="registry-jenis-sengketa">
+          <div class="container">
+            <div class="registry-section-head"><h2>Jenis perkara yang kami tangani</h2></div>
+            <div class="registry-case-grid">
+              <article><h3>Kepemilikan &amp; sertipikat</h3><p>Tumpang tindih sertipikat, pembatalan, dan gugatan terhadap sertipikat ganda.</p></article>
+              <article><h3>Warisan &amp; jual-beli</h3><p>Sengketa tanah warisan antar ahli waris dan transaksi jual-beli bermasalah.</p></article>
+              <article><h3>Penguasaan tanpa hak</h3><p>Penyerobotan tanah, pemalsuan dokumen, dan keputusan BPN yang disengketakan.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="registry-path" id="registry-path">
+          <div class="container">
+            <h2>Empat tahap untuk bergerak dengan tenang.</h2>
+            <ol class="registry-timeline">
+              <li><span>01</span><div><h3>Konsultasi awal</h3><p>Memahami duduk perkara, dokumen, dan kronologi.</p></div></li>
+              <li><span>02</span><div><h3>Legal audit</h3><p>Memeriksa legalitas surat dan dokumen tanah bila diperlukan.</p></div></li>
+              <li><span>03</span><div><h3>Non-litigasi</h3><p>Somasi, negosiasi, dan/atau mediasi dengan pihak lawan.</p></div></li>
+              <li><span>04</span><div><h3>Strategi litigasi</h3><p>Gugatan di pengadilan atau pelaporan pidana jika terdapat indikasi surat palsu.</p></div></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="direction-questions" id="registry-faq">
+          <div class="container direction-questions-grid"><div><h2>Sebelum konsultasi.</h2><p>Jawaban untuk membantu Anda menyiapkan langkah pertama.</p></div><div class="direction-faq-list">
+            <details open>
+              <summary>
+                <span
+                  >Apa dokumen yang perlu disiapkan untuk konsultasi awal?</span
+                >
+                <span class="faq-indicator" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Sertipikat atau surat-surat yang berkaitan dengan kepemilikan
+                  / penguasaan tanah, riwayat transaksi (akta
+                  jual-beli/hibah/warisan), surat-surat terkait dengan sengketa
+                  (somasi, surat dari BPN, dsb.), SPPT PBB, dan kronologi
+                  singkat permasalahan Anda.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>Berapa lama proses penyelesaian sengketa tanah?</span>
+                <span class="faq-indicator" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Bergantung pada kompleksitas kasus.</p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span
+                  >Bagaimana jika pihak lawan menguasai tanah secara fisik tanpa
+                  hak?</span
+                >
+                <span class="faq-indicator" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Kami dapat membantu menyusun strategi hukum yang tepat untuk
+                  melindungi hak dan kepentingan Anda.
+                </p>
+              </div>
+            </details></div></div>
+        </section>
+        <section class="direction-reading" id="registry-artikel"><div class="container">
+          <div class="direction-reading-head"><h2>Catatan hukum.</h2><span>Hukum pertanahan</span></div>
+          <a class="direction-article" href="sertipikat-tanah-ganda.html">
+            <img src="assets/images/documents.webp" alt="Penelaahan dokumen pertanahan" width="1600" height="1067" loading="lazy" />
+            <div><p>Muh. Naim Syahrir, S.H., M.H. · 4 Okt 2026</p><h3>Sertipikat Tanah Ganda:<br />Mana yang Sah?</h3><span>Baca artikel</span></div>
+          </a></div>
+        </section>
+        <section class="registry-cta">
+          <div class="container"><h2>Jangan biarkan dokumen penting dibaca terlambat.</h2><a class="button button-primary" href="https://wa.me/6285342917229?text=Halo%20Navins%20Counsellors%20At%20Law%2C%20saya%20ingin%20berkonsultasi%20mengenai%20sengketa%20tanah." target="_blank" rel="noopener noreferrer">Hubungi Kami Sekarang</a></div>
+        </section>
+      </div>
+
+      <div class="variant-layout variant-layout-brief" aria-labelledby="brief-title">
+        <section class="brief-masthead">
+          <div class="container brief-masthead-inner"><span class="brief-issue">NAVINS COUNSELLORS AT LAW</span><span>Makassar · Indonesia</span><span>Tanah &amp; Properti</span></div>
+        </section>
+        <section class="brief-hero" id="brief-beranda">
+          <div class="container brief-hero-grid">
+            <div class="brief-hero-copy"><h1 id="brief-title">Kepastian dimulai dari <em>membaca</em> persoalan dengan jernih.</h1><p>Pengacara Sengketa Tanah dari Navins Counsellors At Law membantu Anda memahami posisi hukum, risiko, dan pilihan penyelesaian.</p><a class="brief-arrow-link" href="https://wa.me/6285342917229?text=Halo%20Navins%20Counsellors%20At%20Law%2C%20saya%20ingin%20berkonsultasi%20mengenai%20sengketa%20tanah." target="_blank" rel="noopener noreferrer">Bicarakan perkara Anda <svg class="direction-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a></div>
+            <figure class="brief-hero-image"><img src="assets/images/library.webp" alt="Rak buku referensi hukum" width="1400" height="933" /><figcaption>Referensi, kronologi, strategi.</figcaption></figure>
+          </div>
+        </section>
+        <section class="brief-manifesto" id="brief-layanan"><div class="container brief-manifesto-grid"><p class="brief-manifesto-statement">Memahami dokumen.
+Menimbang risiko.
+<strong>Melindungi kepentingan Anda.</strong></p><p class="brief-note">Sengketa tanah tidak memiliki satu pola. Kami mulai dari fakta yang tersedia, lalu menyusun jalur yang paling masuk akal untuk kepentingan Anda.</p></div></section>
+        <section class="brief-services" id="brief-jenis-sengketa"><div class="container"><div class="brief-section-head"><h2>Perkara yang membutuhkan kepala dingin.</h2></div><div class="brief-service-list"><article><h3>Dokumen &amp; sertipikat</h3><p>Kepemilikan, tumpang tindih, pembatalan, atau dugaan sertipikat ganda.</p><a href="mailto:info@pengacarasengketatanah.com">Konsultasikan perkara</a></article><article><h3>Warisan &amp; transaksi</h3><p>Konflik antar ahli waris dan jual-beli tanah yang menyisakan persoalan hukum.</p><a href="mailto:info@pengacarasengketatanah.com">Konsultasikan perkara</a></article><article><h3>Penguasaan &amp; instansi</h3><p>Penyerobotan, pemalsuan dokumen, dan gugatan terhadap keputusan BPN.</p><a href="mailto:info@pengacarasengketatanah.com">Konsultasikan perkara</a></article></div></div></section>
+        <section class="brief-process" id="brief-tahapan"><div class="container brief-process-grid"><div><h2>Dari dokumen ke keputusan.</h2></div><ol><li><span>01</span><div><strong>Konsultasi awal</strong><p>Memetakan fakta, dokumen, dan kronologi.</p></div></li><li><span>02</span><div><strong>Legal audit</strong><p>Memeriksa legalitas dan titik risiko.</p></div></li><li><span>03</span><div><strong>Strategi</strong><p>Memilih non-litigasi atau litigasi sesuai perkara.</p></div></li></ol></div></section>
+        <section class="direction-questions" id="brief-faq">
+          <div class="container direction-questions-grid"><div><h2>Sebelum konsultasi.</h2><p>Jawaban untuk membantu Anda menyiapkan langkah pertama.</p></div><div class="direction-faq-list">
+            <details open>
+              <summary>
+                <span
+                  >Apa dokumen yang perlu disiapkan untuk konsultasi awal?</span
+                >
+                <span class="faq-indicator" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Sertipikat atau surat-surat yang berkaitan dengan kepemilikan
+                  / penguasaan tanah, riwayat transaksi (akta
+                  jual-beli/hibah/warisan), surat-surat terkait dengan sengketa
+                  (somasi, surat dari BPN, dsb.), SPPT PBB, dan kronologi
+                  singkat permasalahan Anda.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>Berapa lama proses penyelesaian sengketa tanah?</span>
+                <span class="faq-indicator" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Bergantung pada kompleksitas kasus.</p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span
+                  >Bagaimana jika pihak lawan menguasai tanah secara fisik tanpa
+                  hak?</span
+                >
+                <span class="faq-indicator" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Kami dapat membantu menyusun strategi hukum yang tepat untuk
+                  melindungi hak dan kepentingan Anda.
+                </p>
+              </div>
+            </details></div></div>
+        </section>
+        <section class="direction-reading" id="brief-artikel"><div class="container">
+          <div class="direction-reading-head"><h2>Catatan hukum.</h2><span>Hukum pertanahan</span></div>
+          <a class="direction-article" href="sertipikat-tanah-ganda.html">
+            <img src="assets/images/documents.webp" alt="Penelaahan dokumen pertanahan" width="1600" height="1067" loading="lazy" />
+            <div><p>Muh. Naim Syahrir, S.H., M.H. · 4 Okt 2026</p><h3>Sertipikat Tanah Ganda:<br />Mana yang Sah?</h3><span>Baca artikel</span></div>
+          </a></div>
+        </section>
+        <section class="brief-footer-cta"><div class="container"><h2>Perkara Anda layak mendapat pembacaan yang utuh.</h2><a class="button button-primary" href="https://wa.me/6285342917229?text=Halo%20Navins%20Counsellors%20At%20Law%2C%20saya%20ingin%20berkonsultasi%20mengenai%20sengketa%20tanah." target="_blank" rel="noopener noreferrer">Hubungi Kami Sekarang</a></div></section>
+      </div>
+
+      <section class="hero" id="beranda" aria-labelledby="hero-title">
+        <figure class="counsel-hero-visual">
+          <img src="assets/images/architecture.webp" alt="Arsitektur gedung hukum dengan pilar klasik" width="1400" height="933" fetchpriority="high" />
+          <figcaption>Navins Counsellors At Law <span>Makassar, Indonesia</span></figcaption>
+        </figure>
         <div class="container hero-grid">
           <div class="hero-copy">
             <h1 id="hero-title">
-              <span>PENGACARA</span><span>SENGKETA TANAH</span>
+              Lindungi hak atas tanah.
+<span>Dengan langkah yang tepat.</span>
             </h1>
             <p class="hero-subtitle">
               <span>Pendampingan Hukum Profesional</span>
               <span>untuk Kasus Pertanahan &amp; Properti</span>
+            </p>
+            <p class="hero-variant-note" data-variant-note>
+              Analisis yang teliti, strategi yang terarah, dan pendampingan sepanjang proses penyelesaian sengketa Anda.
             </p>
             <div class="hero-actions">
               <a
@@ -239,11 +397,12 @@
               </a>
               <a
                 class="button button-secondary-hero"
-                href="mailto:info@pengacarasengketatanah.com"
+                href="#layanan"
               >
-                info@pengacarasengketatanah.com
+                Pelajari layanan kami
               </a>
             </div>
+            <div class="counsel-hero-assurance"><span>Analisis dokumen</span><span>Non-litigasi &amp; litigasi</span></div>
           </div>
         </div>
         <a class="scroll-cue" href="#layanan" aria-label="Ringkasan Layanan">
@@ -269,8 +428,8 @@
           </figure>
           <div class="summary-copy reveal">
             <h2 id="layanan-title">
-              Apakah Anda Sedang Mengalami Permasalahan
-              <span class="title-highlight">Sengketa Tanah?</span>
+              Satu langkah awal untuk
+              <span class="title-highlight">memahami posisi hukum Anda.</span>
             </h2>
             <p class="section-lead">
               Lindungi Hak Atas Tanah Anda Dengan Pendampingan Hukum Yang Tepat!
@@ -315,8 +474,8 @@
       >
         <div class="container">
           <div class="reasons-heading reveal">
-            <p class="reasons-eyebrow">Cara kami bekerja</p>
-            <h2 id="alasan-title">Mengapa<br />Memilih<br />Kami</h2>
+
+            <h2 id="alasan-title">Pendampingan yang dibangun di atas kejelasan.</h2>
             <p class="reasons-intro">
               Pendampingan dimulai dari pemahaman yang jernih atas dokumen,
               risiko, dan tujuan hukum Anda.
@@ -324,7 +483,7 @@
           </div>
           <div class="reasons-grid reveal">
             <article class="reason">
-              <span class="reason-number">01</span>
+
               <div>
                 <h3>Analisis hukum yang komprehensif</h3>
                 <p>
@@ -334,7 +493,7 @@
               </div>
             </article>
             <article class="reason">
-              <span class="reason-number">02</span>
+
               <div>
                 <h3>Strategi sesuai karakter sengketa</h3>
                 <p>
@@ -344,7 +503,7 @@
               </div>
             </article>
             <article class="reason">
-              <span class="reason-number">03</span>
+
               <div>
                 <h3>Penanganan yang transparan</h3>
                 <p>
@@ -354,7 +513,7 @@
               </div>
             </article>
             <article class="reason">
-              <span class="reason-number">04</span>
+
               <div>
                 <h3>Pengalaman di bidang pertanahan</h3>
                 <p>
@@ -839,6 +998,6 @@
       </svg>
     </a>
 
-    <script src="script.js" defer></script>
+    <script src="script.js?v=layouts-2" defer></script>
   </body>
 </html>

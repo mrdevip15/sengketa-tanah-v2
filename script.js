@@ -1,5 +1,97 @@
 document.documentElement.classList.add("has-js");
 
+// Three independent landing-page compositions with shareable URLs.
+const variantPicker = document.querySelector("[data-variant-picker]");
+const variantButtons = variantPicker ? [...variantPicker.querySelectorAll("[data-variant]")] : [];
+const variantNotes = {
+  counsel: "Analisis yang teliti, strategi yang terarah, dan pendampingan sepanjang proses penyelesaian sengketa Anda.",
+  registry: "Dokumen dibaca teliti. Risiko dijelaskan sejak awal.",
+  brief: "Strategi hukum yang tenang untuk perkara yang tidak sederhana.",
+};
+
+const variantAnchors = {
+  counsel: {
+    beranda: "#beranda",
+    layanan: "#layanan",
+    "jenis-sengketa": "#jenis-sengketa",
+    tahapan: "#tahapan",
+    faq: "#faq",
+    artikel: "#artikel",
+  },
+  registry: {
+    beranda: "#registry-beranda",
+    layanan: "#registry-layanan",
+    "jenis-sengketa": "#registry-jenis-sengketa",
+    tahapan: "#registry-path",
+    faq: "#registry-faq",
+    artikel: "#registry-artikel",
+  },
+  brief: {
+    beranda: "#brief-beranda",
+    layanan: "#brief-layanan",
+    "jenis-sengketa": "#brief-jenis-sengketa",
+    tahapan: "#brief-tahapan",
+    faq: "#brief-faq",
+    artikel: "#brief-artikel",
+  },
+};
+
+function setLandingVariant(nextVariant, { persist = true, updateUrl = true } = {}) {
+  const variant = Object.prototype.hasOwnProperty.call(variantNotes, nextVariant) ? nextVariant : "counsel";
+
+  document.body.classList.remove("variant-counsel", "variant-registry", "variant-brief");
+  document.body.classList.add(`variant-${variant}`);
+
+  variantButtons.forEach((button) => {
+    const isActive = button.dataset.variant === variant;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  document.querySelectorAll("[data-variant-note]").forEach((note) => {
+    note.textContent = variantNotes[variant];
+  });
+
+  const anchors = variantAnchors[variant];
+  document.querySelector("[data-brand-link]")?.setAttribute("href", anchors.beranda);
+  document.querySelectorAll("[data-nav-key]").forEach((link) => {
+    const target = anchors[link.dataset.navKey];
+    if (target) link.setAttribute("href", target);
+  });
+
+  if (persist) {
+    try {
+      window.localStorage.setItem("navins-landing-variant", variant);
+    } catch {
+      // Private browsing can disable storage; the page still works per visit.
+    }
+  }
+
+  if (updateUrl && window.history?.replaceState) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("variant", variant);
+    url.hash = "";
+    window.history.replaceState({}, "", url);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+}
+
+if (variantPicker) {
+  const queryVariant = new URLSearchParams(window.location.search).get("variant");
+  let storedVariant = null;
+
+  try {
+    storedVariant = window.localStorage.getItem("navins-landing-variant");
+  } catch {
+    storedVariant = null;
+  }
+
+  setLandingVariant(queryVariant || storedVariant || "counsel", { persist: false, updateUrl: false });
+  variantButtons.forEach((button) => {
+    button.addEventListener("click", () => setLandingVariant(button.dataset.variant));
+  });
+}
+
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const navigation = document.querySelector("[data-navigation]");
 const navigationLinks = navigation ? [...navigation.querySelectorAll("a")] : [];
@@ -76,14 +168,16 @@ if (menuToggle && navigation) {
   });
 }
 
-const faqItems = [...document.querySelectorAll(".faq-list details")];
+const faqItems = [...document.querySelectorAll(".faq-list details, .direction-faq-list details")];
 
 faqItems.forEach((item) => {
   item.addEventListener("toggle", () => {
     if (!item.open) return;
 
     faqItems.forEach((otherItem) => {
-      if (otherItem !== item) otherItem.open = false;
+      if (otherItem !== item && otherItem.parentElement === item.parentElement) {
+        otherItem.open = false;
+      }
     });
   });
 });
