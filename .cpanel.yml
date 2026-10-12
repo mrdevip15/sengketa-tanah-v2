@@ -7,8 +7,8 @@ deployment:
     - /bin/cp -f styles.css "$DEPLOYPATH"
     - /bin/cp -f script.js "$DEPLOYPATH"
     - /bin/cp -f favicon.svg "$DEPLOYPATH"
-    - /bin/cp -f hero-sengketa.webp "$DEPLOYPATH"
-    - /bin/cp -f hero-bg.webp "$DEPLOYPATH"
-    - /bin/cp -f timbangan-law.webp "$DEPLOYPATH"
     - /bin/cp -f sertipikat-tanah-ganda.html "$DEPLOYPATH"
-    - /bin/cp -f sertipikat-tanah-ganda.webp "$DEPLOYPATH"
+    - /bin/cp -f *.jpg "$DEPLOYPATH" 2>/dev/null || true
+    - /bin/cp -f *.jpeg "$DEPLOYPATH" 2>/dev/null || true
+    - /bin/cp -f *.png "$DEPLOYPATH" 2>/dev/null || true
+    - /bin/cp -f *.webp "$DEPLOYPATH" 2>/dev/null || true
