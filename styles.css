@@ -4968,54 +4968,6 @@ body {
   }
 }
 
-/* ---------- Lawyer profile ---------- */
-.lawyer-profile {
-  background: var(--surface);
-  border-block: 1px solid var(--line);
-}
-
-.lawyer-grid {
-  display: grid;
-  grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1.2fr);
-  align-items: center;
-  gap: clamp(var(--space-12), 7vw, 7rem);
-}
-
-.lawyer-photo {
-  position: relative;
-  margin: 0;
-  max-width: 30rem;
-}
-
-.lawyer-copy,
-.consultation-heading,
-.consultation-item,
-.consultation-action {
-  text-align: left;
-}
-
-.lawyer-photo::after {
-  content: "";
-  position: absolute;
-  inset: var(--space-5) calc(var(--space-5) * -1) calc(var(--space-5) * -1) var(--space-5);
-  z-index: 0;
-  border: 1px solid var(--accent);
-  pointer-events: none;
-}
-
-.lawyer-photo img {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 2px;
-  box-shadow: 0 18px 40px rgb(27 42 74 / 14%);
-}
-
-.lawyer-eyebrow,
 .consultation-eyebrow {
   margin: 0 0 var(--space-5);
   color: var(--accent-text);
@@ -5024,49 +4976,6 @@ body {
   letter-spacing: 0.15em;
   line-height: 1.2;
   text-transform: uppercase;
-}
-
-.lawyer-copy h2 {
-  margin: 0;
-  color: var(--primary);
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-}
-
-.lawyer-role {
-  margin: var(--space-3) 0 var(--space-8);
-  padding-bottom: var(--space-6);
-  border-bottom: 1px solid var(--line);
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.lawyer-copy > p:not(.lawyer-eyebrow, .lawyer-role) {
-  max-width: 62ch;
-  margin: 0 0 var(--space-5);
-  color: var(--muted);
-}
-
-.lawyer-links {
-  display: grid;
-  gap: var(--space-3);
-  margin: var(--space-8) 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.lawyer-links a {
-  color: var(--primary);
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px solid var(--accent);
-}
-
-.lawyer-links a:hover {
-  color: var(--accent-text);
 }
 
 /* ---------- Consultation & fees ---------- */
@@ -5138,17 +5047,6 @@ body {
   font-size: 0.95rem;
 }
 
-@media (max-width: 900px) {
-  .lawyer-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-12);
-  }
-
-  .lawyer-photo {
-    max-width: 22rem;
-  }
-}
-
 @media (max-width: 767px) {
   .consultation-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -5158,9 +5056,6 @@ body {
     font-size: clamp(2.6rem, 12vw, 3.4rem);
   }
 
-  .lawyer-photo {
-    max-width: calc(100% - var(--space-5));
-  }
 
   .consultation-action .button {
     width: 100%;
@@ -5325,4 +5220,154 @@ body {
   .situations-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+/* ---------- Firm intro (lawyer photo + service statement) ---------- */
+.firm-intro {
+  background: #ffffff;
+  border-block: 1px solid var(--line);
+}
+
+.firm-intro-copy,
+.firm-intro-photo figcaption,
+.consultation-heading,
+.consultation-item,
+.consultation-action {
+  text-align: left;
+}
+
+.firm-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: clamp(var(--space-12), 6vw, 6rem);
+}
+
+.firm-intro-photo {
+  position: relative;
+  margin: 0 0 var(--space-12);
+  max-width: 32rem;
+}
+
+.firm-intro-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 2px;
+}
+
+.firm-intro-photo figcaption {
+  position: absolute;
+  right: calc(var(--space-6) * -1);
+  bottom: calc(var(--space-12) * -1);
+  left: var(--space-6);
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-5) var(--space-6);
+  border-left: 4px solid var(--accent);
+  background: #ffffff;
+  box-shadow: 0 16px 36px rgb(27 42 74 / 16%);
+}
+
+.firm-intro-photo figcaption strong {
+  color: var(--primary);
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.firm-intro-photo figcaption span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.firm-intro-copy h2 {
+  margin: var(--space-4) 0 var(--space-10);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.22;
+}
+
+.firm-intro-copy h2 strong {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.firm-intro-quote {
+  position: relative;
+  margin: 0;
+  padding: 0 0 clamp(3rem, 5vw, 4rem) clamp(var(--space-12), 6vw, 5rem);
+}
+
+.firm-intro-quote::before,
+.firm-intro-quote::after {
+  position: absolute;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.firm-intro-quote::before {
+  content: "\201C";
+  top: -0.6rem;
+  left: 0;
+}
+
+.firm-intro-quote::after {
+  content: "\201D";
+  right: 0;
+  bottom: -1.2rem;
+}
+
+.firm-intro-quote p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.75;
+}
+
+.firm-intro-quote .firm-intro-tagline {
+  margin-top: var(--space-8);
+  color: var(--ink);
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.firm-intro-tagline strong {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .firm-intro-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-16);
+  }
+
+  .firm-intro-photo {
+    width: min(100% - var(--space-6), 26rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .firm-intro-photo figcaption {
+    right: calc(var(--space-4) * -1);
+    left: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .firm-intro-quote {
+    padding-left: var(--space-10);
+  }
+
 }
