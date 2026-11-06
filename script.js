@@ -133,8 +133,22 @@ function createContactTransactionId() {
 
 const whatsappTransactionId = createContactTransactionId();
 
+// Each WhatsApp link carries "(Ref: CODE)" in its pre-filled message so a chat
+// can be traced to the button that started it. W-* = homepage (NAV, HERO,
+// S-* situation cards, KONS, CTA, FOOT, FLOAT); A-WARIS-* / A-GANDA-* = articles.
+function getWhatsappRef(href) {
+  try {
+    const text = new URL(href).searchParams.get("text") || "";
+    const match = text.match(/\(Ref:\s*([\w-]+)\)/);
+    return match ? match[1] : "untagged";
+  } catch {
+    return "untagged";
+  }
+}
+
 whatsappLinks.forEach((link) => {
   link.addEventListener("click", () => {
+    const waRef = getWhatsappRef(link.href);
     if (typeof gtag === "function") {
       // Google Ads Direct Conversion Tracking for WhatsApp
       gtag("event", "conversion", {
@@ -145,8 +159,9 @@ whatsappLinks.forEach((link) => {
       // Google Analytics (GA4) Event Tracking
       gtag("event", "contact_us", {
         method: "whatsapp",
+        wa_ref: waRef,
         event_category: "engagement",
-        event_label: link.getAttribute("aria-label") || link.textContent.trim() || link.href,
+        event_label: waRef,
       });
     }
   });
