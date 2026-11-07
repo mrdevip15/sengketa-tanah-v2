@@ -2899,7 +2899,7 @@ body {
 .summary-visual {
   position: relative;
   align-self: stretch;
-  min-height: 38rem;
+  min-height: 28rem;
   margin: 0;
   overflow: hidden;
   background: var(--primary);
