@@ -16,7 +16,7 @@ const firmName = firmWordmark + ' ' + firmDescriptor;
 
 const sources = {
   kantor: 'sumber/interior-kantor-ilustratif.jpg',
-  sawah: 'sumber/jeneponto-sawah.jpg',
+  jalanPenutup: 'sumber/jalan-samping-penutup.jpg',
   lahanTepiJalan: 'sumber/lahan-tepi-jalan.jpg',
   arsip: 'sumber/dokumen-arsip.jpg',
   berkas: 'sumber/dokumen-klip.jpg',
@@ -26,7 +26,7 @@ const headings = ['CASE HIGHLIGHT', 'PENJUALAN', 'GUGATAN PERDATA', 'PERTIMBANGA
 const footers = [
   'Reka adegan · foto interior ilustratif', 'Foto ilustrasi · berkas',
   'Reka adegan · konsultasi hukum', 'Lahan tepi jalan · ilustrasi',
-  `Ringkasan perkara · ${firmName}`, `${firmName} · edukasi hukum`,
+  `Ringkasan perkara · ${firmName}`, 'Foto ilustrasi · lahan tepi jalan',
 ];
 const settle = Easing.bezier(.16, 1, .3, 1);
 function progress(value, start, end, easing = settle) {
@@ -325,17 +325,36 @@ function Ruling({time,frame,fps,ratio,durationInFrames,beat}) {
 }
 
 function Closing({time,frame,fps,ratio,uid,beat,durationInFrames}) {
+  const sunFace = progress(time,.86,1.52,Easing.linear);
+  const sunRays = progress(time,1.31,1.93,Easing.linear);
   const questions=[
     [beat.heirs ?? Math.round(durationInFrames*.46),'Siapa ahli warisnya?'],
     [beat.divided ?? Math.round(durationInFrames*.61),'Sudah dibagi?'],
     [beat.consent ?? Math.round(durationInFrames*.77),'Siapa yang setuju?'],
   ];
   return <>
-    <Photo name="sawah" position="63% 58%" zoom={1.04-ratio*.032}/>
-    <defs><linearGradient id={uid+'-sky'} x2="0" y2="1"><stop stopColor="#181b12" stopOpacity=".94"/><stop offset=".7" stopColor="#181b12" stopOpacity=".78"/><stop offset="1" stopColor="#181b12" stopOpacity="0"/></linearGradient></defs>
-    <rect width="540" height="366" fill={`url(#${uid}-sky)`}/>
-    <Title first="Sebelum menjual" second="tanah warisan." firstSize={68} secondSize={62} y={184} color={cream} accent={cream} frame={frame}/>
-    <Actor role="Klien" cx={146} y={357} h={372} frame={frame} fps={fps}/>
+    <Photo name="jalanPenutup" h={910} position="51% 58%" zoom={1.035-ratio*.024}/>
+    <defs>
+      <linearGradient id={uid+'-sky'} x2="0" y2="1">
+        <stop stopColor="#bdeafa"/>
+        <stop offset=".63" stopColor="#d3f2fb" stopOpacity=".94"/>
+        <stop offset=".88" stopColor="#daeff5" stopOpacity=".57"/>
+        <stop offset="1" stopColor="#daeff5" stopOpacity="0"/>
+      </linearGradient>
+    </defs>
+    <rect width="540" height="499" fill={`url(#${uid}-sky)`}/>
+    <Title first="Sebelum menjual" second="tanah warisan." firstSize={68} secondSize={62} y={184} frame={frame}/>
+    <g transform="translate(431 342) rotate(-9)">
+      <path d="M-28 2C-29-14-17-28-2-29S28-19 29-3 18 26 2 29-27 19-28 2Z"
+        fill="#ffd767" opacity={progress(sunFace,.42,1)*.95}/>
+      <Stroke d="M-28 2C-29-14-17-28-2-29S28-19 29-3 18 26 2 29-27 19-28 2Z"
+        p={sunFace} color="#ad5d24" width={2.6}/>
+      <Stroke d="M-1-39l1-12M27-28l9-9M40 0l12 1M29 27l9 9M1 40l1 12M-26 29l-9 10M-40 1l-12 1M-29-27l-8-10"
+        p={sunRays} color="#ad5d24" width={2.6}/>
+      <Stroke d="M-15-9Q-12-17-5-19" p={sunRays} color="#fff5c6" width={2.4}/>
+    </g>
+    <ellipse cx="167" cy="644" rx="47" ry="6" fill="#212514" opacity=".28"/>
+    <Actor role="Klien" cx={146} y={320} h={338} frame={frame} fps={fps}/>
     {questions.map(([cue,question],index)=>{
       const arrived=progress(frame,cue,cue+16);
       const y=417+index*75;
@@ -347,7 +366,7 @@ function Closing({time,frame,fps,ratio,uid,beat,durationInFrames}) {
       </g>;
     })}
     <path fill={paper} d="M0 749l26-5 28 4 45-7 33 2 37-7 39 7 43-6 35 3 49-5 43 3 31-5 44 6 40-6 47 3V960H0Z"/>
-    <Stroke d="M36 272Q117 263 202 272" width={2.2} color="#f9dcbd" p={progress(time,.48,1.22,Easing.linear)}/>
+    <Stroke d="M36 272Q117 263 202 272" width={2.2} p={progress(time,.48,1.22,Easing.linear)}/>
   </>;
 }
 
@@ -393,7 +412,7 @@ export function SceneVisual({scene,durationInFrames,caption,captionAge=0,beat,cl
   const Shot=shots[scene-1];
   const time=frame/fps;
   const ratio=progress(frame,0,Math.max(1,durationInFrames-1),Easing.linear);
-  const darkPaper=scene===4, lightHeader=[2,4,6].includes(scene);
+  const darkPaper=scene===4, lightHeader=scene===2||darkPaper;
   return <svg viewBox="0 0 540 960" width="100%" height="100%" style={{display:'block',background:paper}}>
     <rect width="540" height="960" fill={darkPaper?ink:paper}/>
     <PaperTexture id={uid+'-grain'} dark={darkPaper}/>

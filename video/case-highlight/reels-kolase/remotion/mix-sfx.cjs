@@ -44,6 +44,7 @@ function cuesFor(scene) {
       place((scene.beat.pk ?? ratio(.79))-seconds(.17),'paper',.37,.18);break;
     case 6:
       place(seconds(.48),'underline',.44,-.1);
+      place(seconds(.86),'pencil',.29,.2);
       place(scene.beat.heirs ?? ratio(.46),'paper',.46,-.18);
       place(scene.beat.divided ?? ratio(.61),'paper',.48,-.15);
       place(scene.beat.consent ?? ratio(.77),'paper',.49,-.11);break;
