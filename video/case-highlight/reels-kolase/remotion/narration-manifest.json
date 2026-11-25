@@ -1,0 +1,702 @@
+{
+  "takes": [
+    {
+      "scene": 1,
+      "speaker": "Navins",
+      "text": "Tanah peninggalan orang tua sudah dijual, padahal warisannya belum dibagi. Apa yang terjadi kalau ahli waris lain belum setuju?",
+      "voiceId": "R86jddkroI9bJwXFfjsr",
+      "direction": "curious",
+      "src": "narasi/01.mp3",
+      "seconds": 7.44,
+      "words": [
+        {
+          "text": "Tanah",
+          "start": 0.133,
+          "end": 0.24
+        },
+        {
+          "text": "peninggalan",
+          "start": 0.32,
+          "end": 0.72
+        },
+        {
+          "text": "orang",
+          "start": 0.8,
+          "end": 0.96
+        },
+        {
+          "text": "tua",
+          "start": 1.04,
+          "end": 1.2
+        },
+        {
+          "text": "sudah",
+          "start": 1.28,
+          "end": 1.48
+        },
+        {
+          "text": "dijual,",
+          "start": 1.52,
+          "end": 2.48
+        },
+        {
+          "text": "padahal",
+          "start": 2.56,
+          "end": 2.96
+        },
+        {
+          "text": "warisannya",
+          "start": 3.04,
+          "end": 3.44
+        },
+        {
+          "text": "belum",
+          "start": 3.52,
+          "end": 3.6
+        },
+        {
+          "text": "dibagi.",
+          "start": 3.68,
+          "end": 4.56
+        },
+        {
+          "text": "Apa",
+          "start": 4.6,
+          "end": 4.8
+        },
+        {
+          "text": "yang",
+          "start": 4.84,
+          "end": 4.88
+        },
+        {
+          "text": "terjadi",
+          "start": 4.96,
+          "end": 5.36
+        },
+        {
+          "text": "kalau",
+          "start": 5.44,
+          "end": 5.6
+        },
+        {
+          "text": "ahli",
+          "start": 5.68,
+          "end": 5.84
+        },
+        {
+          "text": "waris",
+          "start": 5.92,
+          "end": 6.16
+        },
+        {
+          "text": "lain",
+          "start": 6.28,
+          "end": 6.4
+        },
+        {
+          "text": "belum",
+          "start": 6.48,
+          "end": 6.56
+        },
+        {
+          "text": "setuju?",
+          "start": 6.64,
+          "end": 7.44
+        }
+      ],
+      "model": "eleven_v4",
+      "levelTargetLufs": -21
+    },
+    {
+      "scene": 2,
+      "speaker": "Navins",
+      "text": "Klien kami adalah salah satu ahli waris yang keberatan. Tanah peninggalan ayahnya dijual oleh ahli waris lain tanpa persetujuannya.",
+      "voiceId": "R86jddkroI9bJwXFfjsr",
+      "direction": "matter-of-fact",
+      "src": "narasi/02.mp3",
+      "seconds": 7.52,
+      "words": [
+        {
+          "text": "Klien",
+          "start": 0.08,
+          "end": 0.32
+        },
+        {
+          "text": "kami",
+          "start": 0.4,
+          "end": 0.72
+        },
+        {
+          "text": "adalah",
+          "start": 0.8,
+          "end": 1.04
+        },
+        {
+          "text": "salah",
+          "start": 1.12,
+          "end": 1.24
+        },
+        {
+          "text": "satu",
+          "start": 1.28,
+          "end": 1.52
+        },
+        {
+          "text": "ahli",
+          "start": 1.6,
+          "end": 1.76
+        },
+        {
+          "text": "waris",
+          "start": 1.84,
+          "end": 2.16
+        },
+        {
+          "text": "yang",
+          "start": 2.2,
+          "end": 2.24
+        },
+        {
+          "text": "keberatan.",
+          "start": 2.32,
+          "end": 3.08
+        },
+        {
+          "text": "Tanah",
+          "start": 3.28,
+          "end": 3.48
+        },
+        {
+          "text": "peninggalan",
+          "start": 3.52,
+          "end": 4
+        },
+        {
+          "text": "ayahnya",
+          "start": 4.16,
+          "end": 4.48
+        },
+        {
+          "text": "dijual",
+          "start": 4.56,
+          "end": 4.96
+        },
+        {
+          "text": "oleh",
+          "start": 5.04,
+          "end": 5.2
+        },
+        {
+          "text": "ahli",
+          "start": 5.24,
+          "end": 5.44
+        },
+        {
+          "text": "waris",
+          "start": 5.52,
+          "end": 5.68
+        },
+        {
+          "text": "lain",
+          "start": 5.76,
+          "end": 6.08
+        },
+        {
+          "text": "tanpa",
+          "start": 6.16,
+          "end": 6.48
+        },
+        {
+          "text": "persetujuannya.",
+          "start": 6.56,
+          "end": 7.6
+        }
+      ],
+      "model": "eleven_v4",
+      "levelTargetLufs": -21
+    },
+    {
+      "scene": 3,
+      "speaker": "Navins",
+      "text": "Kami mengajukan gugatan perdata ke Pengadilan Negeri Setempat. Dalam sidang perdata, para pihak dapat menanggapi gugatan dan mengajukan bukti untuk dinilai hakim.",
+      "voiceId": "R86jddkroI9bJwXFfjsr",
+      "direction": "calm",
+      "src": "narasi/03.mp3",
+      "seconds": 9.52,
+      "words": [
+        {
+          "text": "Kami",
+          "start": 0.069,
+          "end": 0.24
+        },
+        {
+          "text": "mengajukan",
+          "start": 0.28,
+          "end": 0.8
+        },
+        {
+          "text": "gugatan",
+          "start": 0.853,
+          "end": 1.2
+        },
+        {
+          "text": "perdata",
+          "start": 1.32,
+          "end": 1.76
+        },
+        {
+          "text": "ke",
+          "start": 1.84,
+          "end": 1.92
+        },
+        {
+          "text": "Pengadilan",
+          "start": 1.96,
+          "end": 2.4
+        },
+        {
+          "text": "Negeri",
+          "start": 2.44,
+          "end": 2.68
+        },
+        {
+          "text": "Setempat.",
+          "start": 2.72,
+          "end": 3.6
+        },
+        {
+          "text": "Dalam",
+          "start": 3.64,
+          "end": 3.84
+        },
+        {
+          "text": "sidang",
+          "start": 3.92,
+          "end": 4.08
+        },
+        {
+          "text": "perdata,",
+          "start": 4.16,
+          "end": 5.04
+        },
+        {
+          "text": "para",
+          "start": 5.12,
+          "end": 5.2
+        },
+        {
+          "text": "pihak",
+          "start": 5.28,
+          "end": 5.6
+        },
+        {
+          "text": "dapat",
+          "start": 5.68,
+          "end": 5.84
+        },
+        {
+          "text": "menanggapi",
+          "start": 5.92,
+          "end": 6.32
+        },
+        {
+          "text": "gugatan",
+          "start": 6.36,
+          "end": 6.96
+        },
+        {
+          "text": "dan",
+          "start": 7.04,
+          "end": 7.12
+        },
+        {
+          "text": "mengajukan",
+          "start": 7.2,
+          "end": 7.68
+        },
+        {
+          "text": "bukti",
+          "start": 7.72,
+          "end": 8.16
+        },
+        {
+          "text": "untuk",
+          "start": 8.24,
+          "end": 8.48
+        },
+        {
+          "text": "dinilai",
+          "start": 8.56,
+          "end": 8.88
+        },
+        {
+          "text": "hakim.",
+          "start": 8.96,
+          "end": 9.6
+        }
+      ],
+      "model": "eleven_v4",
+      "levelTargetLufs": -21
+    },
+    {
+      "scene": 4,
+      "speaker": "Navins",
+      "text": "Majelis menilai tanahnya belum dibagi, sehingga masih menjadi hak bersama para ahli waris. Karena dijual tanpa persetujuan ahli waris lain, penjualan itu dinilai sebagai perbuatan melawan hukum.",
+      "voiceId": "R86jddkroI9bJwXFfjsr",
+      "direction": "thoughtful",
+      "src": "narasi/04.mp3",
+      "seconds": 11.84,
+      "words": [
+        {
+          "text": "Majelis",
+          "start": 0.08,
+          "end": 0.48
+        },
+        {
+          "text": "menilai",
+          "start": 0.56,
+          "end": 0.96
+        },
+        {
+          "text": "tanahnya",
+          "start": 1.04,
+          "end": 1.36
+        },
+        {
+          "text": "belum",
+          "start": 1.44,
+          "end": 1.6
+        },
+        {
+          "text": "dibagi,",
+          "start": 1.68,
+          "end": 2.44
+        },
+        {
+          "text": "sehingga",
+          "start": 2.64,
+          "end": 3.12
+        },
+        {
+          "text": "masih",
+          "start": 3.2,
+          "end": 3.4
+        },
+        {
+          "text": "menjadi",
+          "start": 3.44,
+          "end": 3.84
+        },
+        {
+          "text": "hak",
+          "start": 3.893,
+          "end": 4
+        },
+        {
+          "text": "bersama",
+          "start": 4.08,
+          "end": 4.56
+        },
+        {
+          "text": "para",
+          "start": 4.64,
+          "end": 4.8
+        },
+        {
+          "text": "ahli",
+          "start": 4.84,
+          "end": 5.04
+        },
+        {
+          "text": "waris.",
+          "start": 5.16,
+          "end": 5.92
+        },
+        {
+          "text": "Karena",
+          "start": 6,
+          "end": 6.16
+        },
+        {
+          "text": "dijual",
+          "start": 6.2,
+          "end": 6.56
+        },
+        {
+          "text": "tanpa",
+          "start": 6.64,
+          "end": 6.88
+        },
+        {
+          "text": "persetujuan",
+          "start": 6.96,
+          "end": 7.44
+        },
+        {
+          "text": "ahli",
+          "start": 7.52,
+          "end": 7.68
+        },
+        {
+          "text": "waris",
+          "start": 7.76,
+          "end": 7.92
+        },
+        {
+          "text": "lain,",
+          "start": 8,
+          "end": 8.64
+        },
+        {
+          "text": "penjualan",
+          "start": 8.72,
+          "end": 9.12
+        },
+        {
+          "text": "itu",
+          "start": 9.28,
+          "end": 9.44
+        },
+        {
+          "text": "dinilai",
+          "start": 9.52,
+          "end": 9.84
+        },
+        {
+          "text": "sebagai",
+          "start": 9.92,
+          "end": 10.16
+        },
+        {
+          "text": "perbuatan",
+          "start": 10.24,
+          "end": 10.8
+        },
+        {
+          "text": "melawan",
+          "start": 10.88,
+          "end": 11.12
+        },
+        {
+          "text": "hukum.",
+          "start": 11.2,
+          "end": 11.92
+        }
+      ],
+      "model": "eleven_v4",
+      "levelTargetLufs": -21
+    },
+    {
+      "scene": 5,
+      "speaker": "Navins",
+      "text": "Pengadilan mengabulkan gugatan. Perjanjian jual belinya dinyatakan batal demi hukum. Hasil itu bertahan pada banding dan peninjauan kembali.",
+      "voiceId": "R86jddkroI9bJwXFfjsr",
+      "direction": "calm",
+      "src": "narasi/05.mp3",
+      "seconds": 8.48,
+      "words": [
+        {
+          "text": "Pengadilan",
+          "start": 0.12,
+          "end": 0.56
+        },
+        {
+          "text": "mengabulkan",
+          "start": 0.613,
+          "end": 1.12
+        },
+        {
+          "text": "gugatan.",
+          "start": 1.16,
+          "end": 2.08
+        },
+        {
+          "text": "Perjanjian",
+          "start": 2.16,
+          "end": 2.56
+        },
+        {
+          "text": "jual",
+          "start": 2.64,
+          "end": 2.8
+        },
+        {
+          "text": "belinya",
+          "start": 2.88,
+          "end": 3.28
+        },
+        {
+          "text": "dinyatakan",
+          "start": 3.36,
+          "end": 3.92
+        },
+        {
+          "text": "batal",
+          "start": 4.053,
+          "end": 4.32
+        },
+        {
+          "text": "demi",
+          "start": 4.36,
+          "end": 4.56
+        },
+        {
+          "text": "hukum.",
+          "start": 4.6,
+          "end": 5.36
+        },
+        {
+          "text": "Hasil",
+          "start": 5.44,
+          "end": 5.6
+        },
+        {
+          "text": "itu",
+          "start": 5.68,
+          "end": 5.92
+        },
+        {
+          "text": "bertahan",
+          "start": 6.04,
+          "end": 6.4
+        },
+        {
+          "text": "pada",
+          "start": 6.453,
+          "end": 6.56
+        },
+        {
+          "text": "banding",
+          "start": 6.64,
+          "end": 7.12
+        },
+        {
+          "text": "dan",
+          "start": 7.2,
+          "end": 7.28
+        },
+        {
+          "text": "peninjauan",
+          "start": 7.36,
+          "end": 7.84
+        },
+        {
+          "text": "kembali.",
+          "start": 7.88,
+          "end": 8.56
+        }
+      ],
+      "model": "eleven_v4",
+      "levelTargetLufs": -21
+    },
+    {
+      "scene": 6,
+      "speaker": "Navins",
+      "text": "Jadi, sebelum menjual tanah warisan, cek siapa saja ahli warisnya, apakah tanahnya sudah dibagi, dan siapa yang menyetujui penjualan.",
+      "voiceId": "R86jddkroI9bJwXFfjsr",
+      "direction": "warm",
+      "src": "narasi/06.mp3",
+      "seconds": 8.88,
+      "words": [
+        {
+          "text": "Jadi,",
+          "start": 0.16,
+          "end": 0.72
+        },
+        {
+          "text": "sebelum",
+          "start": 0.96,
+          "end": 1.28
+        },
+        {
+          "text": "menjual",
+          "start": 1.36,
+          "end": 1.6
+        },
+        {
+          "text": "tanah",
+          "start": 1.68,
+          "end": 1.84
+        },
+        {
+          "text": "warisan,",
+          "start": 1.92,
+          "end": 2.72
+        },
+        {
+          "text": "cek",
+          "start": 2.8,
+          "end": 2.96
+        },
+        {
+          "text": "siapa",
+          "start": 3.04,
+          "end": 3.28
+        },
+        {
+          "text": "saja",
+          "start": 3.36,
+          "end": 3.68
+        },
+        {
+          "text": "ahli",
+          "start": 3.76,
+          "end": 3.92
+        },
+        {
+          "text": "warisnya,",
+          "start": 4,
+          "end": 4.72
+        },
+        {
+          "text": "apakah",
+          "start": 4.8,
+          "end": 5.12
+        },
+        {
+          "text": "tanahnya",
+          "start": 5.2,
+          "end": 5.44
+        },
+        {
+          "text": "sudah",
+          "start": 5.52,
+          "end": 5.68
+        },
+        {
+          "text": "dibagi,",
+          "start": 5.72,
+          "end": 6.56
+        },
+        {
+          "text": "dan",
+          "start": 6.64,
+          "end": 6.72
+        },
+        {
+          "text": "siapa",
+          "start": 6.8,
+          "end": 7.28
+        },
+        {
+          "text": "yang",
+          "start": 7.36,
+          "end": 7.44
+        },
+        {
+          "text": "menyetujui",
+          "start": 7.48,
+          "end": 7.92
+        },
+        {
+          "text": "penjualan.",
+          "start": 8,
+          "end": 8.88
+        }
+      ],
+      "model": "eleven_v4",
+      "levelTargetLufs": -21
+    }
+  ]
+}

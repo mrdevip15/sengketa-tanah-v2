@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="480" viewBox="0 0 200 480">
+<defs><pattern id="h" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(26)"><path d="M0 0v4" stroke="#413731" stroke-width=".85"/></pattern><pattern id="d" width="5" height="7" patternUnits="userSpaceOnUse"><path d="M1 0l1 3m2 1l1 2" stroke="#e4ceab" stroke-width=".7"/></pattern></defs>
+<g stroke="#24211f" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round">
+<!-- The back shoe, heel and sole -->
+<path fill="#8a7667" d="M92 408l13 1-2 28 5 7 6 7q0 5-6 6l-24 2-3-5 7-15z"/>
+<path fill="#332e2b" d="M84 441q6 7 15 3l6-6q5 7 11 10l7 6q0 5-15 6l-27 1q-6-3 3-20z"/>
+<path fill="#aa8b75" d="M142 408l19-2-1 29q1 7 12 15l6 6-5 5-27-4q-4-8-2-13z"/>
+<path fill="#292627" d="M144 443q9 3 14-4l5-1q6 7 15 12 11 4 8 9-8 5-31-1l-12-4z"/>
+<path d="M84 457l36-3m26 0q20 7 37 4" fill="none" stroke="#dfcbb4" stroke-width="1"/>
+<!-- Tailored trousers -->
+<path fill="#5a554e" d="M74 220q34-12 65 1l7 42 2 71 18 86q-14 7-29 2l-16-69-14-79-2 69-4 79q-15 5-28-1l1-86 3-59z"/>
+<path fill="#46413a" d="M75 235l20 0-9 86-3 100-10-1 1-85 3-59zm45 44 21 56 20 85-13 1-15-65z"/>
+<path d="M98 244l-4 88-2 82m26-161 11 73 22 88m-77 4 19 1m48-1 22 1" stroke="#aab0b9" stroke-width="1.05" fill="none"/>
+<!-- Cream shell and fitted navy blazer -->
+<path fill="#343e3d" d="M87 91l12-10 16 0 10 12 12 6q9 9 9 35l-7 39 4 58q-7 6-25 5l-7-19-6 21q-24 4-37-4l7-67-8-35q-3-19 9-31z"/>
+<path fill="#f0e8d9" d="M93 88l7-7 16-1 5 10-9 28-2 64-8-41z"/>
+<path fill="#4d5d57" d="M90 92l6-7 16 87-18-27-4-18 6-5-11-4zm33-3 7 5 5 18-10 6 6 7-20 47z"/>
+<path fill="#2d3736" stroke="none" d="M78 136l10 29-7 55 25 13-1 5q-21 4-36-4l6-60z"/>
+<path d="M79 207l20 1-1 4-20-1m45-2 16-2m-28-34-1 46m-35 8 16 4m46-7-16 6" stroke="#8b9aad" stroke-width="1.05" fill="none"/>
+<circle cx="109" cy="198" r="2.5" fill="#c5a779" stroke-width="1"/>
+<path fill="#d4c2a8" d="M93 82l6-21 18-1q-1 15 4 30l-12 12-16-11z"/>
+<!-- Side-parted bob and face in three-quarter profile -->
+
+<path fill="#aa8d76" d="M79 34q7-17 25-20 14-2 27 10 10 15 5 36l-5 22q0 7 5 14l-20 26-21-10-15-19q2-17-7-34-3-15 6-25z"/>
+<path fill="#c4a58b" d="M85 37q6-15 21-17 13-2 25 12l1 9-12-6q-16 4-22 12-8 12 3 29l21 15-12 17-17-12-8-26q-6-17 0-33z"/>
+<path fill="#cfa889" d="M98 44q9-6 20-12 7-1 12 8l1 10 6 9-5 4-1 7q-4 11-14 10-7 0-14-7-8-9-9-17 0-8 4-12z"/>
+<path fill="#6c5448" d="M98 44q9-15 25-16l7 5 2 6q-7-4-14-5-10 4-20 10z"/>
+<path d="M120 46q4-2 9 0m-11 6q6-2 10 1m-7 .6 4 0m3 2 3 5-3 1m-6 7 7-.7m-7 4 4 0" fill="none" stroke-width="1.05"/>
+<path d="M87 39q-8 14-3 29 3 9 7 15m0-43q-6 17 2 33m9 6 21 17-13 14m21-29-8 15m-31-4 12 12" fill="none" stroke="#796050" stroke-width="1.1"/>
+<!-- Left arm, rolled cuff and supporting fingers -->
+<path fill="#43514d" d="M78 103q-10 2-13 17l-8 44q-3 14 7 20l22 12 8-12-20-16 8-30"/>
+<path fill="#303b38" d="M69 120l-6 44q-2 12 11 18l8 6-9 3-13-11-1-13z"/>
+<path fill="#ebe1ce" d="M82 180l11 8-6 12-12-8z"/>
+<path fill="#d4b59a" d="M91 189l6 0 5-6q4-3 4 1l-2 5 12-2 5 2-1 3-9 1 7 1 3 2-3 2-10-1-8 1-13-3z"/>
+<!-- Contrast portfolio, forearm and waist -->
+<path fill="#78553d" d="M100 155l41-10 15 57-43 12z"/>
+<path fill="#ead6ad" d="M101 157l38-9 1 4-37 10z"/>
+<path d="M116 208l34-9" fill="none" stroke="#deab75" stroke-width="1"/>
+<path fill="#43514d" d="M137 107q7 10 10 25l7 31q2 10-7 16l-29 13-6-12 25-17-8-26"/>
+<path d="M142 130l5 29m-5 7-13 11" fill="none" stroke="#91a0b2" stroke-width="1"/>
+<path fill="#eae1d3" d="M117 178l6 12-7 4-7-13z"/>
+<path fill="#d2b298" d="M112 180l-8 0-8-3-5 2 3 3-5 0q-3 1-.3 3l8 3q4 5 11 4l8-4z"/>
+<path d="M92 182l11 3m-7 1 7 2m0-6 6 1" fill="none" stroke-width=".9"/>
+</g></svg>
